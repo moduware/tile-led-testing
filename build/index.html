@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LED</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- <script src="http://10.0.1.170:8080/target/target-script-min.js#anonymous" async></script> -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- vendor -->
+    <link rel="stylesheet" href="vendor/mdl/material.min.css">
+
+    <!-- nexpaq libs -->
+    <script type="text/javascript" src="js/NexpaqHeader.js"></script>
+    <!-- partials -->
+
+    <!-- screens -->
+
+    <!-- tools-->
+
+    <!-- core -->
+    <script type="text/javascript" src="vendor/mdl/material.min.js"></script>
+    <script type="text/javascript" src="js/native.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <table class="RGB-table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+      <tbody class="rgbValues">
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">R: <input type="number" id="R_value" name="R" min="0" max="255" maxlength="3" value="255" onChange="updateLED()" class="redBG"></td>
+          <td class="mdl-data-table__cell--non-numeric">G: <input type="number" id="G_value" name="G" min="0" max="255" maxlength="3" value="20" onChange="updateLED()" class="greenBG"></td>
+          <td class="mdl-data-table__cell--non-numeric">B: <input type="number" id="B_value" name="B" min="0" max="255" maxlength="3" value="10" onChange="updateLED()" class="blueBG"></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <div class="main-controls">
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="turnLEDOn">On</button>
+      &nbsp;
+      &nbsp;
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="turnLEDOff">Off</button>
+    </div>
+    <br>
+    <br>
+    <div class="flash-controls">
+      <table class="LED-table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <tbody class="LEDValues">
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">LED 1 Brightness: <input type="number" id="LED1_value" name="LED1" min="0" max="9000" maxlength="4" value="8000" onChange="updateFlashTorch()" class="LED1"></td>
+            <td class="mdl-data-table__cell--non-numeric">LED 2 Brightness: <input type="number" id="LED2_value" name="LED2" min="0" max="9000" maxlength="4" value="6000" onChange="updateFlashTorch()" class="LED2"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="flashTorch">FlashTorch</button>
+      &nbsp;
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="flashTorchOff">FlashOff</button>
+      <br>
+      <br>
+      <br>
+      <table class="Flash-table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <tbody class="FlashMode">
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">Flash Mode: <input type="number" id="mode_value" name="flash" min="0" max="15" maxlength="2" value="10" onChange="updateFlash()" class="flash"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="flash">Flash</button>
+      &nbsp;
+      <button class="mdl-button mdl-js-button mdl-button--raised" id="flashOff">FlashOff</button>
+    </div>
+  </body>
+</html>

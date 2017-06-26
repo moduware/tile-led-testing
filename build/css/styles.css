@@ -1,0 +1,27 @@
+body {
+  padding-top: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: white;
+}
+.RGB-table {
+  margin-top: -20vh;
+  font-size: 1.0em !important;
+}
+
+.Flash-table {
+	margin-left: 30%;
+}
+
+#flashTorch {
+	margin-left: 20%;
+}
+
+#flash {
+	margin-left: 25%;
+}
+
